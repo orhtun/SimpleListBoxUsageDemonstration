@@ -1,0 +1,14 @@
+﻿<Window x:Class="SimpleListBoxUsageDemonstration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <DockPanel VerticalAlignment="Stretch">
+
+            <Button DockPanel.Dock="Bottom" Command="{Binding Main.InsertRandomItemCommand, Source={StaticResource Locator}}" >Add Random Item</Button>
+
+            <ListBox ScrollViewer.VerticalScrollBarVisibility="Auto" ItemsSource="{Binding Main.SampleList, Source={StaticResource Locator}}">
+            </ListBox>
+        </DockPanel>
+    </Grid>
+</Window>
